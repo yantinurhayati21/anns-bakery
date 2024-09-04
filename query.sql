@@ -58,11 +58,6 @@ CREATE TABLE detail_order (
     FOREIGN KEY (order_id) REFERENCES orders(id)
 );
 
--- Insert sample data into users table
-INSERT INTO users (email, username, password, role) VALUES
-('admin123@example.com', 'admin123', '$argon2id$v=19$m=65536,t=3,p=4$qIlodSQD5fsrgePZe5LhzA$gkNQFhL33pvwjiDF7rxRWWlRM9t501V80w1ts0cpWGg', 'admin'),
-('cust1@example.com', 'cust1', '$argon2id$v=19$m=65536,t=3,p=4$7RX2CO3WO3sugMsF68WiBg$2FppYqNOW6JlGtLyB4CgOHtDehrT4boDYr5wOenrqlc', 'kasir');
-
 -- Insert sample data into categories table
 INSERT INTO categories (name, description) VALUES
 ('Chocolate', 'Cakes made with rich chocolate flavors'),
