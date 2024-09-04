@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* CSS for Home */
+.carousel-container {
+  padding-top: 72px; 
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img:nth-child(1) {
+  animation: fade 15s infinite;
+}
+
+.carousel img:nth-child(2) {
+  animation: fade 15s infinite 5s;
+}
+
+.carousel img:nth-child(3) {
+  animation: fade 15s infinite 10s;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  33.33% { opacity: 1; }
+  66.66% { opacity: 0; }
+}
+
+/* Styling for the content sections */
+.home-content {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #5a4b8b; /* A deep purple color */
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.25rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.specialties-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+
+.specialties-list li {
+  background-color: #e0d4f5; /* Light purple background */
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  color: #5a4b8b; /* A deep purple color */
+}
+
+.carousel-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.carousel-text {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #5a4b8b;
+}
+
+.carousel-text:nth-child(1) {
+  animation: textFade 15s infinite 1s;
+}
+
+.carousel-text:nth-child(2) {
+  animation: textFade 15s infinite 6s;
+}
+
+.carousel-text:nth-child(3) {
+  animation: textFade 15s infinite 11s;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes textFade {
+  0%, 100% { opacity: 0; }
+  33.33% { opacity: 1; }
+  66.66% { opacity: 0; }
+}
+
+
+
+
+/* Footer.css */
+footer {
+  background: linear-gradient(135deg, #6B46C1, #9F7AEA);
+  color: white;
+  padding: 40px 20px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+footer p, footer ul {
+  font-size: 0.9rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ECC94B; /* Yellow */
+}
+
+footer .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+footer .social-icons a:hover {
+  transform: scale(1.1);
+}
+
+footer .social-icons svg {
+  width: 24px;
+  height: 24px;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 30px;
+}
+
+/* In your global CSS or relevant stylesheet */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.bg-gray-100 {
+  background-color: #f7f7f7;
+}
+
+.ml-64 {
+  margin-left: 16rem; /* Adjust according to your sidebar width */
+}
+
+.md\:ml-0 {
+  margin-left: 0;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.z-50 {
+  z-index: 50;
+}
